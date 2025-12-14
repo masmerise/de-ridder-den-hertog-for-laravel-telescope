@@ -1,0 +1,50 @@
+{
+    "name": "masmerise/de-ridder-den-hertog-for-laravel-telescope",
+    "description": "Telescope adapter for De Ridder & Den Hertog SDK.",
+    "license": "MIT",
+    "keywords": [
+        "laravel",
+        "renh"
+    ],
+    "authors": [
+        {
+            "name": "Muhammed Sarı",
+            "role": "Developer"
+        }
+    ],
+    "homepage": "https://github.com/masmerise/de-ridder-den-hertog-for-laravel-telescope",
+    "require": {
+        "php": "~8.5",
+        "illuminate/contracts": "^12.0",
+        "illuminate/http": "^12.0",
+        "illuminate/support": "^12.0",
+        "laravel/telescope": "^5.0"
+    },
+    "require-dev": {
+        "larastan/larastan": "^3.6.1",
+        "laravel/pint": "^1.24",
+        "orchestra/testbench": "^10.6"
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "autoload": {
+        "psr-4": {
+            "DeRidderDenHertog\\Laravel\\Telescope\\": "src"
+        }
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "DeRidderDenHertog\\Laravel\\Telescope\\ServiceProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "format": "vendor/bin/pint",
+        "larastan": "vendor/bin/phpstan analyse --memory-limit=2G",
+        "verify": ["@larastan"]
+    }
+}
