@@ -17,7 +17,7 @@ final class ServiceProvider extends AggregateServiceProvider
     public function register(): void
     {
         $this->app->extend(ClientRequestWatcher::class,
-            static fn (ClientRequestWatcher $watcher) => new UnwrapDeRidderDenHertogXml($watcher)
+            static fn (ClientRequestWatcher $watcher) => new RecordDeRidderDenHertogRequests($watcher)
         );
     }
 }

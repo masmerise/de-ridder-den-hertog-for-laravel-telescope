@@ -18,18 +18,26 @@
         "illuminate/contracts": "^13.0",
         "illuminate/http": "^13.0",
         "illuminate/support": "^13.0",
-        "laravel/telescope": "^5.0"
+        "laravel/telescope": "^5.0",
+        "saloonphp/saloon": "^4.0"
     },
     "require-dev": {
         "larastan/larastan": "^3.9",
         "laravel/pint": "^1.24",
-        "orchestra/testbench": "^11.0"
+        "masmerise/de-ridder-den-hertog-php-sdk": "^1.2",
+        "orchestra/testbench": "^11.0",
+        "phpunit/phpunit": "^13.4"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
     "autoload": {
         "psr-4": {
             "DeRidderDenHertog\\Laravel\\Telescope\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "DeRidderDenHertog\\Laravel\\Telescope\\Tests\\": "tests"
         }
     },
     "config": {
@@ -45,6 +53,10 @@
     "scripts": {
         "format": "vendor/bin/pint",
         "larastan": "vendor/bin/phpstan analyse --memory-limit=2G",
-        "verify": ["@larastan"]
+        "test": "vendor/bin/phpunit",
+        "verify": [
+            "@larastan",
+            "@test"
+        ]
     }
 }

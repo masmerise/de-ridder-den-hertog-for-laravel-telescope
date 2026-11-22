@@ -13,11 +13,11 @@ final readonly class TagAction
             return [];
         }
 
-        if ($entry->content['uri'] !== 'https://renh.online/RHAPI_WEB/awws/RHAPI.awws') {
+        if (! Endpoint::matches($entry->content['uri'] ?? '')) {
             return [];
         }
 
-        if (! array_key_exists('Action', $entry->content['payload'])) {
+        if (! is_array($entry->content['payload'] ?? null) || ! array_key_exists('Action', $entry->content['payload'])) {
             return [];
         }
 

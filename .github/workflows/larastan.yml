@@ -23,3 +23,5 @@ jobs:
 
       - name: Execute Larastan
         run: composer larastan
+      - name: Execute tests
+        run: composer test
