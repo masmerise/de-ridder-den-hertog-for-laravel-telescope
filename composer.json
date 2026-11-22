@@ -15,15 +15,15 @@
     "homepage": "https://github.com/masmerise/de-ridder-den-hertog-for-laravel-telescope",
     "require": {
         "php": "~8.5",
-        "illuminate/contracts": "^12.0",
-        "illuminate/http": "^12.0",
-        "illuminate/support": "^12.0",
+        "illuminate/contracts": "^13.0",
+        "illuminate/http": "^13.0",
+        "illuminate/support": "^13.0",
         "laravel/telescope": "^5.0"
     },
     "require-dev": {
-        "larastan/larastan": "^3.6.1",
+        "larastan/larastan": "^3.9",
         "laravel/pint": "^1.24",
-        "orchestra/testbench": "^10.6"
+        "orchestra/testbench": "^11.0"
     },
     "minimum-stability": "dev",
     "prefer-stable": true,
